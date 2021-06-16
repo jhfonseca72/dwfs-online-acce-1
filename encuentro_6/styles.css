@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  color: blue;
+}
+
+.card {
+  width: auto;
+  padding: 1rem;
+  border: 1px solid #fff566;
+}
+
+img {
+  width: 200px;
+}
