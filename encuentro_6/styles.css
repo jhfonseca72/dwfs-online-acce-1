@@ -1,18 +1,23 @@
-.container {
-  display: flex;
-  justify-content: center;
+body {
+  font-family: "Poppins";
+  height: 100vh;
+  color: #4b72a6;
 }
 
-.title {
-  color: blue;
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
   width: auto;
   padding: 1rem;
-  border: 1px solid #fff566;
+  border: 1px solid #572ee5;
+  margin: 10px;
 }
 
 img {
   width: 200px;
+  height: 200px;
 }

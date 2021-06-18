@@ -1,44 +1,30 @@
 //TODO: Modules: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 import data from './data.js';
-import createCard from './renders.js';
-
-/*
-    <div class="card">
-        <h1 id="title">Hola DOM</h1>
-        <img id="image">
-        <p id="id"></p>
-    </div>
-    */
-
+import {
+    createCards,
+    createCardsFromTemplate,
+    createCardsWithFragment,
+    createCardsWithInnerHTML,
+    createCardWithDOMParser
+} from './renders.js';
 
 (function () {
-    /*const title = document.getElementById("title");
-    title.classList.add(data[0].classes);
-    title.textContent = data[0].name;
+    /**----------- Using createElement ------------*/
+    //createCards(data, document.querySelector(".restaurants"));
 
-    const image = document.getElementById("image");
-    image.src = data[0].image_api;
+    /*------------ Using innerHTML -----------*/
+    //document.querySelector(".restaurants").innerHTML = "";
+    //createCardsWithInnerHTML(data, document.querySelector(".restaurants"));
 
-    const id = document.getElementById("id");
-    id.textContent = data[0].id;
+    /*------------ Using DOMParser -----------*/
+    //document.querySelector(".restaurants").innerHTML = "";
+    //createCardWithDOMParser(data, document.querySelector(".restaurants"));
 
-    console.log(title);*/
+    /*------------ Using Fragments -----------*/
+    //document.querySelector(".restaurants").innerHTML = "";
+    //createCardsWithFragment(data, document.querySelector(".restaurants"));
 
-    for (const restaurant of data) {
-        console.log(restaurant)
-        const card = createCard(restaurant);
-        const restaurants = document.getElementById("restaurants");
-        restaurants.appendChild(card);
-    }
-
-    /*let html = "";
-    for (const restaurant of data) {
-        html = html + `<div class="card">
-                            <h1>${restaurant.name}</h1>
-                            <img src="${restaurant.image_api}">
-                            <p>${restaurant.id}</p>
-                        </div>`
-    }
-    const restaurants = document.getElementById("restaurants");
-    restaurants.innerHTML = html;*/
+    /*------------ Using Template -----------*/
+    //document.querySelector(".restaurants").innerHTML = "";
+    //createCardsFromTemplate(data, document.querySelector(".restaurants"));
 })();

@@ -6,8 +6,7 @@ const data = [
         "location": {
             "lat": -75.567213,
             "lng": 6.240727
-        },
-        "classes": "title"
+        }
     },
     {
         "id": 2,
@@ -106,7 +105,8 @@ const data = [
         "location": {
             "lat": -75.568386,
             "lng": 6.208049
-        }
+        },
+        "promo": true
     },
     {
         "id": 13,
