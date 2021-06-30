@@ -34,7 +34,17 @@ console.log(resolveByDefault);
 
 
 //TODO: Fetch
+function crearProductosHtml(data) {
+    let html = "";
+    for (const product of data) {
+        html += `<img src="${product.image}">`
+    }
+    document.body.innerHTML = html;
+}
 
+const response = fetch("https://fakestoreapi.com/products")
+response.then((httpResponse) => httpResponse.json())
+    .then((data) => crearProductosHtml(data))
 
 
 
