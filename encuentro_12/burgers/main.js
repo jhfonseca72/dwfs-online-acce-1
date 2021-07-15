@@ -1,5 +1,6 @@
 import data from "./data.js";
-
+import axios from './node_modules/@bundled-es-modules/axios/axios.js';
+import * as other from './imports.js';
 
 const API_BURGER_URL = "https://601c74da1a9c220017060a09.mockapi.io/api/v1/restaurants";
 
@@ -60,6 +61,7 @@ const createImage = (productImage, productName) => {
  * Esta funcion consulta un API usando la libreria de axios
  */
 const fetchRestaurants = async () => {
+  console.log(axios);
   const { data } = await axios.get(API_BURGER_URL);
   return data;
 }
@@ -104,14 +106,12 @@ const addFiguresByRestaurants = async (data) => {
   }
 }
 
-(async function () {
-  try {
-    const restaurants = await fetchRestaurants();
-    addFiguresByRestaurants(restaurants);
+try {
+  const restaurants = await fetchRestaurants();
+  addFiguresByRestaurants(restaurants);
 
-    const map = createMap(data)
-    addMarkers(restaurants, map);
-  } catch (e) {
-    console.log(e);
-  }
-})
+  const map = createMap(data)
+  addMarkers(restaurants, map);
+} catch (e) {
+  console.error(e);
+}

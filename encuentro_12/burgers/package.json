@@ -4,16 +4,11 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
+    "@bundled-es-modules/axios": "^0.21.1",
     "mapbox-gl": "^2.3.1"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.5"
   }
 }
