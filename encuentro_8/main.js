@@ -44,6 +44,10 @@ console.log("resultadoFilter", resultadoFilter);
 
 candidates.forEach((candidate) => console.log("forEach!!!", candidate))
 
+//TODO: Sort score
+const ascResultados = candidates.sort((a, b) => a.score - b.score);
+console.log(ascResultados);
+
 //TODO: setTimeout
 
 setTimeout(() => {
@@ -56,7 +60,25 @@ setTimeout(() => {
 //TODO: Filtrar por categoria
 
 
+import products from './products.js'
 
+function showProducts(products) {
+    let htmlProducts = '';
+    for (const product of products) {
+        htmlProducts += createProductCard(product);
+    }
+    document.querySelector(".products").innerHTML = htmlProducts;
+}
+
+function createProductCard(product) {
+    return `<div class="card">
+                <h1>${product.title}</h1>
+                <img src="${product.image}">
+                <p>${product.price}</p>
+            </div>`
+}
+
+showProducts(products);
 
 
 
