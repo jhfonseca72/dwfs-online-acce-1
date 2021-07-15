@@ -1,6 +1,7 @@
 //Events (Concerts, Theater, Sports) 
 
 //TODO: Scope and Hoisting
+
 //var eventName = undefined;
 //console.log(eventName);
 const eventName = "Marron5";
@@ -18,7 +19,6 @@ const bookSeats2 = function () {
 
 //bookSeats3();
 const bookSeats3 = () => console.log("bookSeats3");
-
 
 (function hoistinFunction() {
     console.log(name)
@@ -51,21 +51,4 @@ try {
 } catch (error) {
     document.write(`Sorry ${error}`);
 }
-
-
-//TODO: Arrow functions and Lexical Scope
-const eventsSports = [
-    { performer: "Warriors vs Lakers", category: "Sports", seats: 20 },
-    { performer: "Lakers vs Warriors", category: "Sports", seats: 10 }];
-
-const eventsTheater = [
-    { performer: "Hamilton", category: "Theater", seats: 5 },
-    { performer: "Jeremy Jordan", category: "Theater", seats: 0 }];
-
-const eventsConcerts = [
-    { performer: "Marron 5", category: "Concert", seats: 10 },
-    { performer: "Harry styles", category: "Concert", seats: 10 }];
-
-
-
 
